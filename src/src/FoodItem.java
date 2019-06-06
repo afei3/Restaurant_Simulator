@@ -4,6 +4,7 @@ public class FoodItem {
     private String description;
     private String name;
     private double servings;
+    private String foodType;
 
     public double getCost() {
         return cost;
@@ -31,6 +32,14 @@ public class FoodItem {
 
     public double getServings() {
         return servings;
+    }
+
+    public void setFoodType(String foodType) {
+        this.foodType = foodType;
+    }
+
+    public String getFoodType() {
+        return foodType;
     }
 }
 

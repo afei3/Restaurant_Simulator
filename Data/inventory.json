@@ -1,2 +1,94 @@
 {
+  "inventory": [
+    {
+      "name": "Banana",
+      "servings": 9,
+      "price": 0.8,
+      "description": "A yellow fruit grown by the sandy shores near Delphi. Imported from the Chagri shores of Pythea.",
+      "cost": 1,
+      "foodType": "Fruit"
+    },
+    {
+      "name": "Mango",
+      "servings": 9,
+      "price": 1,
+      "description": "A red-green ish tropical fruit imported from near Xanthe edges of the Hellas sea. Both Tai'ka and Chagri alike have enjoyed this fruit for centuries across civilizations.",
+      "cost": 1,
+      "foodType": "Fruit"
+    },
+    {
+      "name": "Emberry",
+      "servings": 3,
+      "price": 1,
+      "description": "A red berry fruit about the size of the average Thalassian palm. Its orange pattern resembles the wavering flickers of fire. It hails from west Xanthe near Varag territory. The beastmen used it culturally as a test of endurance amongst their members.",
+      "cost": 1,
+      "foodType": "Fruit"
+    },
+    {
+      "name": "Orange",
+      "servings": 15,
+      "price": 0.2,
+      "description": "Named after the titular color, this fruit hails from far before even the Rhons grown south of modern Thalassia. It is a staple fruit amongst even modern Thalassian culture. It is also a versatile fruit that grown in even somewhat humid climates. Anyone from the Varags, Sheng, Bhuka, and Taika consume this fruit. ",
+      "cost": 1,
+      "foodType": "Fruit"
+    },
+    {
+      "name": "Apple",
+      "servings": 12,
+      "price": 0.07,
+      "description": "A red fruit that grows in plentiful amounts across forested regions worldwide. Its juicy taste and versatility make it a commodity worldwide. Entire orchards blanket the Thalassian farmlands, for example.",
+      "cost": 1,
+      "foodType": "Fruit"
+    },
+    {
+      "name": "Watermelon",
+      "servings": 5,
+      "price": 0.8,
+      "description": "A fruit that grows in somewhat tropical climates. The Chagri started cultivating in eons ago on the riverbanks of the Helri River that leads into where modern Delphi sits. Its thick, green shells hides a juicy interior most enjoyable in the summer seasons.",
+      "cost": 1,
+      "foodType": "Spice"
+    },
+    {
+      "name": "Corn",
+      "servings": 10,
+      "price": 0.04,
+      "description": "A borderline invasive yellow crop that grows well in almost any region. No one is exactly certain where corn originates from, but it seems civilizations worldwide and across history ate the vegetable rather consistenly.",
+      "cost": 1,
+      "foodType": "Vegetable"
+    },
+    {
+      "name": "White Sugar",
+      "servings": 5,
+      "price": 0.3,
+      "description": "Sugar grown from sugarcane cultivated in the tropical regions of Pythia and southern Thalassia. A commodity sought after worldwide. ",
+      "cost": 1,
+      "foodType": "Spice"
+    },
+    {
+      "name": "Brown Sugar",
+      "servings": 3,
+      "price": 0.4,
+      "description": "Sugarcane from the tropical regions of Pythia and southern Thalassia mixed with molasses. An equally sought after commodity worldwide. More expensive to produce and create. The Bhuka create their own variant of brown sugar by mixing white sugar with rhanda, a local spice.",
+      "cost": 1,
+      "foodType": "Spice"
+    },
+    {
+      "name": "Red Sugar",
+      "servings": 3,
+      "price": 0.7,
+      "description": "Red sugar is produced when dried emberries are tossed with refined white sugar. This process can somehow happen when the sugar canes of the Xanthe desert mix in nature with wild emberries. Such sugar canes will sprout in an orange hue instead of its usual green.",
+      "cost": 1,
+      "foodType": "Spice"
+    },
+    {
+      "name": "Rhanda",
+      "servings": 2,
+      "price": 0.7,
+      "description": "A spice native to the north Xanthe desert. The Bhuka harvest it as a traditional plant since time immemorial. It tastes somewhat bitter, but it can be made into an exotic spice to add a certain... Unique flavor to a dish. The Rhanda plant is actually a snow white flower that stands out in the desert and tundra sands. When dried upon death, it is ground into the titular Rhanda powder.",
+      "cost": 1,
+      "foodType": "Spice"
+    }
+  ],
+
+  "foodTypes": ["Fruit", "Vegetable", "Spice"]
 }
