@@ -19,4 +19,8 @@ public class Restaurant {
     public String[] getFoodTypes() {
         return foodTypes;
     }
+
+    public void applyAnomaly(int num) {
+
+    }
 }
