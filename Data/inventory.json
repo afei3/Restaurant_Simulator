@@ -90,5 +90,17 @@
     }
   ],
 
-  "foodTypes": ["Fruit", "Vegetable", "Spice"]
+  "foodTypes": ["Fruit", "Vegetable", "Spice"],
+  "anomalies": [
+    {
+      "name": "Explosive potatoes",
+      "buffedType": "Spice",
+      "nerfedType": "Fruit"
+    },
+    {
+      "name": "Not Exploding Potatoes",
+      "buffedType": "Vegetable",
+      "nerfedType": "Fruit"
+    }
+  ]
 }
