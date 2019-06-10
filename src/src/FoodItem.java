@@ -5,6 +5,8 @@ public class FoodItem {
     private String name;
     private double servings;
     private String foodType;
+    private boolean nerfed = false;
+    private boolean buffed = false;
 
     public double getCost() {
         return cost;
@@ -40,6 +42,39 @@ public class FoodItem {
 
     public String getFoodType() {
         return foodType;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public boolean isBuffed() {
+        return buffed;
+    }
+
+    public boolean isNerfed() {
+        return nerfed;
+    }
+
+    public void setBuffed(boolean buffed) {
+        this.buffed = buffed;
+    }
+
+    public void setServings(double servings) {
+        this.servings = servings;
+    }
+
+    public void setNerfed(boolean nerfed) {
+        this.nerfed = nerfed;
+    }
+
+    public void resetChanges() {
+        buffed = false;
+        nerfed = false;
     }
 }
 
