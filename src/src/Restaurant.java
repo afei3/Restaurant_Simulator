@@ -37,6 +37,13 @@ public class Restaurant {
         }
     }
 
+    public void resetAnomaly() {
+        lastAnomaly = -1;
+        for (int i = 0; i < inventory.size(); ++i) {
+            inventory.get(i).resetChanges();
+        }
+    }
+
     public void randomAnomaly() {
         Random r = new Random();
         int num;

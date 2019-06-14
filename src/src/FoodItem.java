@@ -7,6 +7,7 @@ public class FoodItem {
     private String foodType;
     private boolean nerfed = false;
     private boolean buffed = false;
+    private double currentCost;
 
     public double getCost() {
         return cost;
@@ -75,6 +76,25 @@ public class FoodItem {
     public void resetChanges() {
         buffed = false;
         nerfed = false;
+    }
+
+    public double getCurrentCost() {
+        return currentCost;
+    }
+
+    public void setCurrentCost(double currentPrice) {
+        this.currentCost = currentPrice;
+    }
+
+    public void calcCurrentCost() {
+        currentCost = price;
+        if (buffed) {
+            currentCost *= .8;
+        }
+
+        if (nerfed) {
+            currentCost *= 1.2;
+        }
     }
 }
 
