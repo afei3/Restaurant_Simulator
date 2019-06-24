@@ -7,6 +7,8 @@ public class Restaurant {
     private ArrayList<FoodItem> inventory;
     private ArrayList<Anomaly> anomalies = new ArrayList<>();
     private int lastAnomaly = 0;
+    private double tableQuality;
+    private ArrayList<Employee> workers;
     public String[] foodTypes;
 
     public static Restaurant startFromFile(String fileName) {

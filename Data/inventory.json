@@ -93,15 +93,20 @@
   "foodTypes": ["Fruit", "Vegetable", "Spice"],
   "anomalies": [
     {
-      "name": "Explosive potatoes",
-      "buffedType": "Spice",
+      "name": "Explosive Fruit",
+      "buffedType": "",
       "nerfedType": "Fruit"
     },
     {
-      "name": "Not Exploding Potatoes",
-      "buffedType": "Vegetable",
-      "nerfedType": "Fruit"
+      "name": "Exploding Vegetable",
+      "buffedType": "",
+      "nerfedType": "Vegetable"
+    },
+    {
+      "name": "Spice Festival",
+      "buffedType": "Spice",
+      "nerfedType": ""
     }
   ],
-  "lastAnomaly": 12
+  "lastAnomaly": -1
 }
