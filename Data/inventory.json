@@ -89,7 +89,11 @@
       "foodType": "Spice"
     }
   ],
+  "workers": [
+    {
 
+    }
+  ],
   "foodTypes": ["Fruit", "Vegetable", "Spice"],
   "anomalies": [
     {

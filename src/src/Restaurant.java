@@ -7,7 +7,7 @@ public class Restaurant {
     private ArrayList<FoodItem> inventory;
     private ArrayList<Anomaly> anomalies = new ArrayList<>();
     private int lastAnomaly = 0;
-    private double tableQuality;
+    private double restaurantQuality;
     private ArrayList<Employee> workers;
     public String[] foodTypes;
 
