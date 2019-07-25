@@ -7,5 +7,6 @@ public class main {
         for (int i = 0; i < 10; i++) {
             longJon.randomAnomaly();
         }
+        gui.createGUI();
     }
 }
