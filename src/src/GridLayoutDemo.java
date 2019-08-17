@@ -1,6 +1,8 @@
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
+import java.lang.reflect.Array;
+import java.util.ArrayList;
 
 public class GridLayoutDemo extends JFrame {
     static final String gapList[] = {"0", "10", "15", "20"};
@@ -12,7 +14,7 @@ public class GridLayoutDemo extends JFrame {
 
     public GridLayoutDemo(String name) {
         super(name);
-        setResizable(false);
+        setResizable(true);
     }
 
     public void initGaps() {
@@ -20,7 +22,7 @@ public class GridLayoutDemo extends JFrame {
         verGapComboBox = new JComboBox(gapList);
     }
 
-    public void addComponentsToPane(final Container pane) {
+    public void addComponentsToPane(final Container pane, ArrayList<FoodItem> foods) {
         initGaps();
         final JPanel compsToExperiment = new JPanel();
         compsToExperiment.setLayout(experimentLayout);
@@ -34,11 +36,9 @@ public class GridLayoutDemo extends JFrame {
                 (int)(buttonSize.getHeight() * 3.5)+maxGap * 2));
 
         //Add buttons to experiment with Grid Layout
-        compsToExperiment.add(new JButton("Button 1"));
-        compsToExperiment.add(new JButton("Button 2"));
-        compsToExperiment.add(new JButton("Button 3"));
-        compsToExperiment.add(new JButton("Long-Named Button 4"));
-        compsToExperiment.add(new JButton("5"));
+        for (FoodItem thing : foods) {
+            compsToExperiment.add(new JButton(thing.getName()));
+        }
 
         //Add controls to set up horizontal and vertical gaps
         controls.add(new Label("Horizontal gap:"));
@@ -73,18 +73,18 @@ public class GridLayoutDemo extends JFrame {
      * this method is invoked from the
      * event dispatch thread.
      */
-    private static void createAndShowGUI() {
+    private static void createAndShowGUI(ArrayList<FoodItem> foods) {
         //Create and set up the window.
         GridLayoutDemo frame = new GridLayoutDemo("GridLayoutDemo");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         //Set up the content pane.
-        frame.addComponentsToPane(frame.getContentPane());
+        frame.addComponentsToPane(frame.getContentPane(), foods);
         //Display the window.
         frame.pack();
         frame.setVisible(true);
     }
 
-    public static void main(String[] args) {
+    public static void runGui(ArrayList<FoodItem> foods) {
         /* Use an appropriate Look and Feel */
         try {
             //UIManager.setLookAndFeel("com.sun.java.swing.plaf.windows.WindowsLookAndFeel");
@@ -105,7 +105,7 @@ public class GridLayoutDemo extends JFrame {
         //creating and showing this application's GUI.
         javax.swing.SwingUtilities.invokeLater(new Runnable() {
             public void run() {
-                createAndShowGUI();
+                createAndShowGUI(foods);
             }
         });
     }

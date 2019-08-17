@@ -17,6 +17,50 @@ public class Restaurant {
         return ljs;
     }
 
+    public ArrayList<Anomaly> getAnomalies() {
+        return anomalies;
+    }
+
+    public ArrayList<Employee> getWorkers() {
+        return workers;
+    }
+
+    public ArrayList<FoodItem> getInventory() {
+        return inventory;
+    }
+
+    public double getRestaurantQuality() {
+        return restaurantQuality;
+    }
+
+    public int getLastAnomaly() {
+        return lastAnomaly;
+    }
+
+    public void setAnomalies(ArrayList<Anomaly> anomalies) {
+        this.anomalies = anomalies;
+    }
+
+    public void setFoodTypes(String[] foodTypes) {
+        this.foodTypes = foodTypes;
+    }
+
+    public void setInventory(ArrayList<FoodItem> inventory) {
+        this.inventory = inventory;
+    }
+
+    public void setLastAnomaly(int lastAnomaly) {
+        this.lastAnomaly = lastAnomaly;
+    }
+
+    public void setRestaurantQuality(double restaurantQuality) {
+        this.restaurantQuality = restaurantQuality;
+    }
+
+    public void setWorkers(ArrayList<Employee> workers) {
+        this.workers = workers;
+    }
+
     public FoodItem getFoodItem(int num) {
         return inventory.get(num);
     }
