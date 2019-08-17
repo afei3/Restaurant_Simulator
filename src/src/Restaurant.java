@@ -10,6 +10,22 @@ public class Restaurant {
     private double restaurantQuality;
     private ArrayList<Employee> workers;
     public String[] foodTypes;
+    private ArrayList<Customer> customers;
+    private int currentCap;
+    private int capacity;
+    private int cashAvailable;
+
+    public Restaurant() {
+        inventory = new ArrayList<>();
+        restaurantQuality = 0;
+        workers = new ArrayList<>();
+        foodTypes = new String[0];
+        cashAvailable = 0;
+        customers = new ArrayList<>();
+        currentCap = 0;
+        capacity = 0;
+        cashAvailable = 0;
+    }
 
     public static Restaurant startFromFile(String fileName) {
         Gson gson = new Gson();
@@ -98,5 +114,15 @@ public class Restaurant {
         } while (num == lastAnomaly);
         applyAnomaly(num);
         System.out.println(num);
+    }
+
+    public void increaseQuality(double increase) {
+        restaurantQuality += increase;
+    }
+
+    public void newCustomer() {
+        if (capacity > currentCap) {
+            customers.add(Customer.generateCustomer());
+        }
     }
 }
