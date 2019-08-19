@@ -14,6 +14,8 @@ public class Restaurant {
     private int currentCap;
     private int capacity;
     private int cashAvailable;
+    private int hour;
+    private int minute;
 
     public Restaurant() {
         inventory = new ArrayList<>();
@@ -124,5 +126,84 @@ public class Restaurant {
         if (capacity > currentCap) {
             customers.add(Customer.generateCustomer());
         }
+    }
+
+    public void customerDone(int id) {
+        for (int i = 0; i < customers.size(); i++) {
+            if (customers.get(i).getId() == i) {
+                customers.remove(i);
+                break;
+            }
+        }
+    }
+
+    public void runDay() {
+        hour = 0;
+        minute = 0;
+        for (int i = 0; i < 720; i++) {
+            incrementTime();
+        }
+    }
+
+    public void runWeek() {
+        for (int i = 0; i < 7; i++) {
+            runDay();
+        }
+    }
+
+    public void incrementTime() {
+        minute++;
+        if (minute == 60) {
+            minute = 0;
+            hour++;
+        }
+    }
+
+    public int getCapacity() {
+        return capacity;
+    }
+
+    public ArrayList<Customer> getCustomers() {
+        return customers;
+    }
+
+    public int getCashAvailable() {
+        return cashAvailable;
+    }
+
+    public int getCurrentCap() {
+        return currentCap;
+    }
+
+    public int getHour() {
+        return hour;
+    }
+
+    public int getMinute() {
+        return minute;
+    }
+
+    public void setCapacity(int capacity) {
+        this.capacity = capacity;
+    }
+
+    public void setCashAvailable(int cashAvailable) {
+        this.cashAvailable = cashAvailable;
+    }
+
+    public void setCurrentCap(int currentCap) {
+        this.currentCap = currentCap;
+    }
+
+    public void setCustomers(ArrayList<Customer> customers) {
+        this.customers = customers;
+    }
+
+    public void setHour(int hour) {
+        this.hour = hour;
+    }
+
+    public void setMinute(int minute) {
+        this.minute = minute;
     }
 }
