@@ -36,4 +36,10 @@ public class Customer {
     public static void setIdGenerator(int idGenerator) {
         Customer.idGenerator = idGenerator;
     }
+
+    public Customer(double startCash) {
+        cash = startCash;
+        id = idGenerator;
+        idGenerator++;
+    }
 }
