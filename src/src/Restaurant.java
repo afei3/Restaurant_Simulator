@@ -16,6 +16,7 @@ public class Restaurant {
     private int cashAvailable;
     private int hour;
     private int minute;
+    private double[][] arrivalTimes;
 
     public Restaurant() {
         inventory = new ArrayList<>();
